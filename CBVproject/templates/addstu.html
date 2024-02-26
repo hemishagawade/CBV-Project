@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+    <style>
+        body{
+            color: rgb(114, 242, 249);
+            background-color: rgb(37, 38, 38);
+        }
+        #button{
+            text-decoration: none;
+            font-size: larger;
+            font-weight: bolder;
+            background-color: rgb(33, 225, 235);
+            border: none;
+            color: white;
+            padding: 8px 15px;
+            margin-top: 20px;
+            border-radius: 3px;
+        }
+        #container{
+            background: white;
+            width: max-content;
+            padding: 20px;
+            border-radius: 10px;
+            color: rgb(37, 38, 38);
+            box-shadow: 0px 0px 10px 0 rgb(200, 252, 252);
+        }    
+    </style>
+</head>
+<body>
+    <center>
+        <h1>ADD NEW STUDENT:</h1>
+    <div id="container">
+        <h4>Please provide the following details:</h4>
+        <hr>
+        <form action="/addstu" method="post">
+            {% csrf_token %}
+            <table cellspacing="10" cellpadding="5">
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="name" required></td>
+                </tr>
+                <tr>
+                    <td>Branch:</td>
+                    <td><input type="text" name="branch" required></td>
+                </tr>
+                <tr>
+                    <td>Percent:</td>
+                    <td><input type="text" name="perc" required></td>
+                </tr>
+                <tr>
+                    <th colspan="2"><center><input type="submit" id="button" value="ADD Student Details"></center></th>
+                </tr>
+            </table>
+        </form>
+    </div>  
+    </center>
+</body>
+</html>
+
