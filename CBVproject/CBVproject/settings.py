@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'django_cbv',
         'USER': 'localhost',
         'USER': 'root',
-        'PASSWORD': 'Hemy@29070118',
+        'PASSWORD': 'enteryourpassword',
         'PORT': 3306
     }
 }
