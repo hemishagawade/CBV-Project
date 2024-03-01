@@ -28,7 +28,7 @@ class AddStudent(View):
 class UpdateStudent(View):
     def get(self,request,sid):
         s = Student.objects.filter(id=sid)
-        context = {'stu':s}
+        context = {'stu':s[0]}
         return render(request,'updatestu.html',context)
     
     def post(self,request,sid):
